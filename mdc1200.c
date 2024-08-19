@@ -14,7 +14,7 @@
 // >= 24-bit pre-amble
 //    40-bit sync
 //
-const uint8_t mdc1200_pre_amble[] = {0x00, 0x00, 0x00};
+const uint8_t mdc1200_pre_amble[] = {0x55, 0x55};
 const uint8_t mdc1200_sync[5]     = {0x07, 0x09, 0x2a, 0x44, 0x6f};
 //
 // before successive bit xorring:

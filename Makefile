@@ -31,24 +31,24 @@ ENABLE_NOAA                      := 0
 ENABLE_VOICE                     := 0
 ENABLE_MUTE_RADIO_FOR_VOICE      := 0
 # Tx on Voice 1.0 kB
-ENABLE_VOX                       := 1
-ENABLE_VOX_MORE_SENSITIVE        := 1
+ENABLE_VOX                       := 0
+ENABLE_VOX_MORE_SENSITIVE        := 0
 # Tx Alarm 600 B
 ENABLE_ALARM                     := 0
 ENABLE_TX_TONE_HZ                := 1750
 #
 # MDC1200 2.8 kB
-ENABLE_MDC1200                   := 0
+ENABLE_MDC1200                   := 1
 ENABLE_MDC1200_SHOW_OP_ARG       := 1
 ENABLE_MDC1200_SIDE_BEEP         := 1
 #
 ENABLE_PWRON_PASSWORD            := 0
 ENABLE_RESET_AES_KEY             := 0
-ENABLE_BIG_FREQ                  := 0
+ENABLE_BIG_FREQ                  := 1
 #
 # DTMF_CALLING 2.8 kB
 ENABLE_DTMF_CALLING              := 0
-ENABLE_DTMF_LIVE_DECODER         := 0
+ENABLE_DTMF_LIVE_DECODER         := 1
 ENABLE_DTMF_TIMING_SETTINGS      := 0
 ENABLE_DTMF_CALL_FLASH_LIGHT     := 0
 # Kill and Revive 400 B
@@ -68,7 +68,7 @@ ENABLE_TX_WHEN_AM                := 0
 ENABLE_F_CAL_MENU                := 0
 # FM DEV CAL 250 B
 ENABLE_FM_DEV_CAL_MENU           := 0
-ENABLE_TX_UNLOCK_MENU            := 0
+ENABLE_TX_UNLOCK_MENU            := 1
 #ENABLE_TX_POWER_CAL_MENU        := 0
 ENABLE_TX_POWER_FIX              := 1
 ENABLE_CTCSS_TAIL_PHASE_SHIFT    := 1
@@ -81,28 +81,28 @@ ENABLE_FREQ_SEARCH_LNA           := 0
 ENABLE_FREQ_SEARCH_TIMEOUT       := 0
 ENABLE_CODE_SEARCH_TIMEOUT       := 0
 # scan ignore list 740 B
-ENABLE_SCAN_IGNORE_LIST          := 1
+ENABLE_SCAN_IGNORE_LIST          := 0
 # scan ranges 400 B
-ENABLE_SCAN_RANGES               := 1
+ENABLE_SCAN_RANGES               := 0
 # AM Fix 800 B
 ENABLE_AM_FIX                    := 1
 ENABLE_AM_FIX_SHOW_DATA          := 0
 #ENABLE_SQUELCH_MORE_SENSITIVE    := 0
-ENABLE_SQ_OPEN_WITH_UP_DN_BUTTS  := 1
+ENABLE_SQ_OPEN_WITH_UP_DN_BUTTS  := 0
 ENABLE_FASTER_CHANNEL_SCAN       := 1
 ENABLE_COPY_CHAN_TO_VFO_TO_CHAN  := 1
 # Tx Audio Bar 300 B
-ENABLE_TX_AUDIO_BAR              := 0
+ENABLE_TX_AUDIO_BAR              := 1
 ENABLE_TX_AUDIO_BACKLIGHT        := 0
 # Side Button Menu 300 B
-ENABLE_SIDE_BUTT_MENU            := 0
+ENABLE_SIDE_BUTT_MENU            := 1
 # Key Lock 400 B
 ENABLE_KEYLOCK                   := 0
 # panadapter 1.5kB
 ENABLE_PANADAPTER                := 1
-ENABLE_PANADAPTER_PEAK_FREQ      := 0
+ENABLE_PANADAPTER_PEAK_FREQ      := 1
 # single VFO 1.5kB
-ENABLE_SINGLE_VFO_CHAN           := 1
+ENABLE_SINGLE_VFO_CHAN           := 0
 
 #############################################################
 
@@ -110,7 +110,7 @@ TARGET = firmware
 
 GIT_HASH_TMP := $(shell git rev-parse --short HEAD)
 ifeq ($(GIT_HASH_TMP), )
-	GIT_HASH := "NOGIT"
+	GIT_HASH := "CUSTOM"
 else
 	GIT_HASH := $(GIT_HASH_TMP)
 endif
